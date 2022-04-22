@@ -5,17 +5,15 @@
 }
 
 body {
-  width: 100%;
-  height: 100vh;
   font-family: 'Poppins', sans-serif;
   color: hsl(234, 12%, 34%);
   font-weight: 400;
   font-size: 15px;
   letter-spacing: .2px;
+  width: 100%;
+  height: 100vh;
   background-color: hsl(0, 0%, 98%);
 }
-
-.grayish-blue {color: hsl(229, 6%, 66%)}
 
 .container {
   width: 100%;
@@ -57,6 +55,8 @@ default -> width 100%
   }
 }
 
+.grayish-blue {color: hsl(229, 6%, 66%)}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -73,12 +73,10 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-
 .sub-head {
   font-size: 2.25rem;
   font-weight: 200;
 }
-
 .main-head {
   font-size: 2.25rem;
   font-weight: 600;
@@ -90,14 +88,11 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2.9%;
+  justify-content: space-between;
   margin-top: 65px;
 }
 
-.col {
-  flex-grow: 1;
-  max-width: 31.4%;
-}
+.col { max-width: 31.5% }
 
 .card {
   position: relative;
@@ -106,27 +101,20 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.36);
   border-radius: 5px;
   box-shadow: 0 0 20px 5px hsl(227, 31%, 89%);
 }
-.border-cyan {
-  border-top: 4px solid hsl(180, 62%, 55%);
-}
-.border-red {
-  border-top: 4px solid hsl(0, 78%, 62%);
-}
-.border-orange {
-  border-top: 4px solid hsl(34, 97%, 64%);
-}
-.border-blue {
-  border-top: 4px solid hsl(212, 86%, 64%);
-}
+
+.border-cyan { border-top: 4px solid hsl(180, 62%, 55%) }
+.border-red { border-top: 4px solid hsl(0, 78%, 62%) }
+.border-orange { border-top: 4px solid hsl(34, 97%, 64%) }
+.border-blue { border-top: 4px solid hsl(212, 86%, 64%) }
 
 .col-center {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 30px;
 }
 .card h3 {
   font-size: 1.2rem;
@@ -141,21 +129,48 @@ section {
   bottom: 30px;
 }
 
+/* media query */
+
 @media (max-width: 992px) {
   .head {
-    width: 305px;
+    width: 340px;
   }
   .sub-head, .main-head {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .col {
     min-width: 100%;
   }
   .card {
-    width: 313px;
-    height: 223px;
+    width: 350px;
+    height: 250px;
   }
   .card-container {
-    gap: 28px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .head {
+    width: 300px;
+  }
+  .sub-head, .main-head {
+    font-size: 1.5rem;
+  }
+  .head .des-head {
+    font-size: .93rem;
+  }
+  .card p {
+    font-size: .75rem;
+  }
+  .col {
+    min-width: 100%;
+  }
+  .card {
+    width: 300px;
+    height: 225px;
+  }
+  .card-container {
+    gap: 30px;
   }
 }
